@@ -1,6 +1,6 @@
 # Kernel space benchmark
 
-To get significant results benchmarking a function with the x86_64 RDTSCP assembly instruction we need to reduce jitter caused by interrupts,
+To get significant results benchmarking a function with the x86_64 RDTSCP instruction we need to reduce jitter caused by interrupts,
 running the program as a kernel module allow us to disable preemption and hardware interrupts during the measurement.
 
 From the BIOS settings we disable CPU frequency scaling, turbo, hyperthreading and power saving features to have less indeterminism.

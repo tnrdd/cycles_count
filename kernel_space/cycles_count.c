@@ -56,7 +56,7 @@ static inline void count_cycles(uint64_t *cycles)
 	}
 }
 
-uint64_t calc_mean(uint64_t *cycles, int occurrencies)
+uint64_t calc_mean(uint64_t *cycles, uint32_t occurrencies)
 {
 	uint32_t i;
 	uint64_t sum;

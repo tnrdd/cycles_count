@@ -9,11 +9,11 @@
 static inline void count_cycles(uint64_t *cycles)
 { 	
 	uint32_t i;
-	unsigned long flags;
 	uint64_t start_low;
 	uint64_t start_high;
 	uint64_t end_low;
 	uint64_t end_high;
+	unsigned long flags;
 
 	asm volatile ("rdtscp\n\t"
 	     	      "lfence\n\t"		

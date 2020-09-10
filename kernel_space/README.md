@@ -15,7 +15,7 @@ If we run ```insmod cycles_count.ko``` and ```rmmod cycles_count``` from a conso
 Running the program without an user-provided function to be measured will report the overhead of the measurement itself, the statistics from this run are to be
 subtracted from the respective statistics resulted from a run when a function to be measured is provided by the user.
 
-We edit ```cycles_count.c``` to define a function to be measured and call it in the ```count_cycles``` function.
+We edit ```cycles_count.c``` to define a function to be measured and call it in ```count_cycles()```.
 
 # References
 

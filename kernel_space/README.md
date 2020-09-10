@@ -5,7 +5,7 @@ running the program as a kernel module allow us to disable preemption and hardwa
 
 From the BIOS settings we disable CPU frequency scaling, turbo, hyperthreading and power saving features to have less indeterminism.
 
-We run ```$ make``` to build the program.
+We run ```$ make all``` to build the program.
 
 Then we run ```# insmod cycles_count.ko``` to insert the module in the kernel and ```# rmmod cycles_count``` to remove it.
 

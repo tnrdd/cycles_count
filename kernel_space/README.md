@@ -17,6 +17,6 @@ subtracted from the respective statistics resulted from a run when a function to
 
 We edit ```cycles_count.c``` to define a function to be measured and call it in the ```count_cycles``` function.
 
-# Referencies
+# References
 
 https://www.kernel.org/doc/Documentation/preempt-locking.txt

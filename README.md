@@ -3,7 +3,7 @@ Read the TSC register with the x86_64 RDTSCP instruction to benchmark the execut
 from both kernel and user space.
 LFENCE is used to avoid other instructions being executed before the reading is complete.
 
-# Referencies
+# References
 
 https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/ia-32-ia-64-benchmark-code-execution-paper.pdf
 

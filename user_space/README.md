@@ -21,4 +21,14 @@ To pin the benchmarking process to core 2 we run
 Running the program without an user-provided function to be measured will report the overhead of the measurement itself, the statistics from this run are to be
 subtracted from the respective statistics resulted from a run when a function to be measured is provided by the user.
 
-To define a function to be measured we edit ```cycles_count.c``` and call it in the ```count_cycles``` function.
+We edit ```cycles_count.c``` to define a function to be measured and call it in the ```count_cycles``` function.
+
+# Referencies
+
+https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html
+
+https://www.kernel.org/doc/Documentation/timers/NO_HZ.txt
+
+https://lore.kernel.org/patchwork/patch/888867/
+
+

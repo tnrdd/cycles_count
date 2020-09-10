@@ -10,7 +10,7 @@ Run ```$ make all``` to build the program.
 Then run ```# insmod cycles_count.ko``` to insert the module in the kernel and ```# rmmod cycles_count``` to remove it.
 
 The statistics are logged in ```/var/log/syslog```.
-If ```insmod cycles_count.ko``` and ```rmmod cycles_count``` are run from a console the statistics are dispayed directly in the console.
+If ```insmod cycles_count.ko``` and ```rmmod cycles_count``` are used from a console the statistics are dispayed directly in the console.
 
 Running the program without an user-provided function to be measured will report the overhead of the measurement itself, the statistics from this run are to be
 subtracted from the respective statistics resulted from a run when a function to be measured is provided by the user.

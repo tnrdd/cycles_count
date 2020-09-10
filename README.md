@@ -1,7 +1,7 @@
 # Cycles Count
-Read the TSC register with the x86_64 RDTSCP instruction to benchmark
-the execution of a function in CPU clock cycles granularity from both
-kernel and user space.
+Read the TSC register with the x86_64 RDTSCP instruction to benchmark the execution of a function in CPU clock cycles granularity
+from both kernel and user space.
+LFENCE is used to avoid other instructions being executed before the reading is complete.
 
 # Referencies
 

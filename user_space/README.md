@@ -3,7 +3,7 @@
 To get significant results benchmarking a function with the x86_64 RDTSCP instruction in user space it's necessary to reduce jitter caused by interrupts.
 
 Build the kernel with ```CONFIG_NO_HZ_FULL=y``` and ```CONFIG_RCU_NOCB_CPU=y``` kconfig options. 
-The first option tell the kernel to avoid sending scheduling-clock interrupts to CPUs running a single task and the second option tell the kernel to offload RCU callbacks, in both cases we need to specify the interested CPUs to the bootloader.
+The first option tells the kernel to avoid sending scheduling-clock interrupts to CPUs running a single task and the second option tells the kernel to offload RCU callbacks, in both cases we need to specify the interested CPUs to the bootloader.
 
 Open with an editor ```/etc/default/grub``` and insert the command-line parameters ```GRUB_CMDLINE_LINUX_DEFAULT="irqaffinity=0,1 isolcpus=nohz,domain,2,3 nohz=on nohz_full=2,3 rcu_nocbs=2,3 rcu_nocb_poll"```
 

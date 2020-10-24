@@ -70,7 +70,7 @@ uint64_t calc_mean(uint64_t *cycles, uint32_t occurrencies)
 	return sum / occurrencies;
 }
 
-uint64_t calc_var(uint64_t *cycles, uint64_t mean, uint32_t occurrencies) 
+uint64_t calc_variance(uint64_t *cycles, uint64_t mean, uint32_t occurrencies) 
 { 
 	uint32_t i; 
 	uint64_t variance;
@@ -97,26 +97,28 @@ static int __init cycles_count_start(void)
 		return -1;
 	}
 
-	count_cycles(cycles); 
+	count_cycles(cycles);
 	
-	for (i = 0; i < REPETITION_COUNT; i++) { 
+	stats.min = cycles[0];
+	stats.max = cycles[0];
+	
+	for (i = 1; i < REPETITION_COUNT; i++) { 
 
-		if ((stats.min > cycles[i]) || (stats.min == 0)) {
+		if (cycles[i]) < stats.min) {
 			stats.min = cycles[i]; 
-		}
-
-		if (stats.max < cycles[i]) { 
+		
+		} else if (cycles[i] > stats.max) { 
 			stats.max = cycles[i]; 
 		} 
 	}
 	
 	stats.mean = calc_mean(cycles, REPETITION_COUNT);
-	stats.var = calc_var(cycles, stats.mean, REPETITION_COUNT);
+	stats.var = calc_variance(cycles, stats.mean, REPETITION_COUNT);
 	
 	printk("min: %llu cycles\n", stats.min); 
 	printk("max: %llu cycles\n", stats.max); 
 	printk("mean: %llu cycles\n", stats.mean); 
-	printk("variance: %llu cycles\n", stats.var);
+	printk("variance: %llu cycles\n", stats.variance);
 	
 	kfree(cycles);
 	return 0;

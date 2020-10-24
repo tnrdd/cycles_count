@@ -18,7 +18,7 @@ struct statistics {
 	uint64_t min; 
 	uint64_t max;
 	uint64_t mean;
-        uint64_t var;
+        uint64_t variance;
 };
 
 #endif /* CYCLES_COUNT_H */

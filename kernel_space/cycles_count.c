@@ -113,7 +113,7 @@ static int __init cycles_count_start(void)
 	}
 	
 	stats.mean = calc_mean(cycles, REPETITION_COUNT);
-	stats.var = calc_variance(cycles, stats.mean, REPETITION_COUNT);
+	stats.variance = calc_variance(cycles, stats.mean, REPETITION_COUNT);
 	
 	printk("min: %llu cycles\n", stats.min); 
 	printk("max: %llu cycles\n", stats.max); 

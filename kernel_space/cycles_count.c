@@ -104,7 +104,7 @@ static int __init cycles_count_start(void)
 	
 	for (i = 1; i < REPETITION_COUNT; i++) { 
 
-		if (cycles[i]) < stats.min) {
+		if (cycles[i] < stats.min) {
 			stats.min = cycles[i]; 
 		
 		} else if (cycles[i] > stats.max) { 

@@ -99,6 +99,7 @@ int main(int argc, char **argv)
 
 		if (cycles[i] < stats.min) {
 			stats.min = cycles[i]; 
+		
 		} else if (cycles[i] > stats.max) { 
 			stats.max = cycles[i]; 
 		} 

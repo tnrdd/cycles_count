@@ -106,7 +106,7 @@ int main(int argc, char **argv)
 	}
 	
 	stats.mean = calc_mean(cycles, REPETITION_COUNT);
-	stats.var = calc_variance(cycles, stats.mean, REPETITION_COUNT);
+	stats.variance = calc_variance(cycles, stats.mean, REPETITION_COUNT);
 	
 	printf("min: %lu cycles\n", stats.min); 
 	printf("max: %lu cycles\n", stats.max); 

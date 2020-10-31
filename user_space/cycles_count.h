@@ -12,7 +12,7 @@
 #include <stdlib.h>
 
 #define REPETITION_COUNT 100000 
-#define LOWER_HALF_BITS 32
+#define HIGH_HALF_BITS 32
 
 struct statistics {
 	uint64_t min; 

@@ -52,7 +52,7 @@ static inline void count_cycles(uint64_t *cycles)
 		raw_local_irq_restore(flags);        
 		preempt_enable();
 		
-		cycles[i] = ((end_high - start_high) << LOWER_HALF_BITS) + (end_low  - start_low); 
+		cycles[i] = ((end_high - start_high) << HIGH_HALF_BITS) + (end_low  - start_low); 
 	}
 }
 

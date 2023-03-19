@@ -2,7 +2,7 @@ CC = gcc
 
 CFLAGS = -march=native -O3 -Wall
 
-LDFLAGS = -lm
+LDLIBS = -lm
 
 default: cycles_count
 cycles_counter: cycles_count.o
